@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
 		
-		for (i = 0; i < opomniki.length; i++) {
+		for (var i = 0; i < opomniki.length; i++) {
 			var opomnik = opomniki[i];
 			var casovnik = opomnik.querySelector("span");
 			var cas = parseInt(casovnik.innerHTML);
@@ -16,5 +16,15 @@ window.addEventListener('load', function() {
 		}
 	}
 	setInterval(posodobiOpomnike, 1000);
+	
+	var izvediPrijavo = function(event) {
+		var ime = document.querySelector("#uporabnisko_ime").value;
+		// nastavi "pozdralvjeni, ime"
+		document.querySelector("#uporabnik").innerHTML = ime;
+		
+		// skrij pokrivalo
+		document.querySelector(".pokrivalo").style.display = "none";
+	}
+	document.querySelector("#prijavniGumb").addEventListener("click", izvediPrijavo);
 	
 });
