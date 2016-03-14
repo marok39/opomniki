@@ -27,6 +27,10 @@ telo {
 	width: calc(100% - 20px); 
 	float: left; 
 	padding: 10px;
+	border: 1px solid transparent; 
+	border-color: #C30C21; 
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .rob {
@@ -67,3 +71,4 @@ telo {
 	background-color: #fff;
 	padding: 30px;
 }
+
